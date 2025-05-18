@@ -42,12 +42,13 @@ if (isset($CategoryID)) {
         <div class="sidebar" >
             <h1>Control Panel</h1>
             <ul>
-                <li><a href="home.php" target="_blank">Home Page</a></li>
-                <li><a href="products.php">Products Page</a></li>
-                <li><a href="add_product.php">Add Product</a></li>
-                <li><a href="">Costumers Info</a></li>
-                <li><a href="">Costumers Orders</a></li>
-                <li><a href="includes/logout.inc.php"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;Logout</a></li>
+                <li><a href="home.php"><i class="fas fa-home"></i> Home Page</a></li>
+                <li><a href="control_panel.php"><i class="fas fa-layer-group"></i> Manage Category</a></li>
+                <li><a href="products.php"><i class="fa-brands fa-product-hunt"></i>Products Page</a></li>
+                <li><a href="add_product.php"><i class="fas fa-plus-circle"></i> Add Product</a></li>
+                <li><a href="costumer_info.php"><i class="fas fa-users"></i> Customers Info</a></li>
+                <li><a href="costumer_orders.php"><i class="fas fa-shopping-cart"></i> Customers Orders</a></li>
+                <li><a href="includes/logout.inc.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
         <div class="content_cat">

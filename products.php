@@ -30,9 +30,10 @@ if (isset($ProductID)) {
         <ul>
             <li><a href="home.php"><i class="fas fa-home"></i> Home Page</a></li>
             <li><a href="control_panel.php"><i class="fas fa-layer-group"></i> Manage Category</a></li>
+            <li><a href="products.php"><i class="fa-brands fa-product-hunt"></i>Products Page</a></li>
             <li><a href="add_product.php"><i class="fas fa-plus-circle"></i> Add Product</a></li>
-            <li><a href="#"><i class="fas fa-users"></i> Customers Info</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> Customers Orders</a></li>
+            <li><a href="costumer_info.php"><i class="fas fa-users"></i> Customers Info</a></li>
+            <li><a href="costumer_orders.php"><i class="fas fa-shopping-cart"></i> Customers Orders</a></li>
             <li><a href="includes/logout.inc.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>

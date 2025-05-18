@@ -188,7 +188,7 @@ if (isset($_GET['remove'])) {
 <body>
     <div class="container">
         <div class="con_head">
-            <img src="assets/profile-placeholder.png" alt="Profile Image">
+            <img src="images/cart.jpg" alt="Profile Image">
             <h1><?php echo htmlspecialchars($CostumerName); ?>'s Cart</h1>
         </div>
         

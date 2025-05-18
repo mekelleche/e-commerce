@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>online store</h1>
-            <img src="images/logo.jpg">
+            <img src="images/logo1.jpg">
         </div>
         <div class="search">
             <div class="search_bar">
@@ -51,9 +51,14 @@
 </nav>
 <div class="cart">
         <ul>
-            <li><a href="signup.php"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="profile.php"><i class="fa-solid fa-user"></i></a></li>
             <li class="cart-icon"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
-            <span class="cart-counter">1</span>
+            <?php
+            $stmt = $conn->prepare("SELECT * FROM Cart");
+            $stmt->execute();
+            $cartItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            ?>
+            <span class="cart-counter"><?php echo htmlspecialchars(count($cartItems));?></span>
             </li>
             
         </ul>

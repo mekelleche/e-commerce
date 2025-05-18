@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "includes/connect.inc.php";
 
 $error = '';
@@ -38,10 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt = $conn->prepare("INSERT INTO Customer (FirstName, LastName, Email, Phone, Password, Address) VALUES (?, ?, ?, ?, ?, ?)");
                 $stmt->execute([$firstName, $lastName, $email, $phone, $hashedPassword, $address]);
                                 
-                // Clear form
                 $firstName = $lastName = $email = $phone = $address = '';
-                echo '<script>alert("Registration successful! You can now login.");</script>';
-                header("Location: home.php");
+                $_SESSION['signup_success'] = true;
+                header("Location: index.php");
                 
             } catch (PDOException $e) {
                 $error = "Database error: " . $e->getMessage();

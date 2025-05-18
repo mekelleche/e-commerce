@@ -1,6 +1,6 @@
 <div class="footer-container"> 
         <div class="copy">
-            <p> Mekelleche.Mokhtar &copy; 2025</p>
+            <p> Mekelleche.Hamdadou &copy; 2025 All rights reserved</p>
         </div>
     </div>
 </body>

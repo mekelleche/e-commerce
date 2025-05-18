@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['signup_success']) && $_SESSION['signup_success'] === true) {
+    echo '<script>alert("Registration successful! You can now login.");</script>';
+    // Remove the session variable so the message doesn't show again on page refresh
+    unset($_SESSION['signup_success']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

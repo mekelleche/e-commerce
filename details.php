@@ -156,7 +156,7 @@ main {
             $res = $stmt->fetch(PDO::FETCH_ASSOC);
             ?>
             <h2 class="product_category"><a href="section.php?CategoryID=<?php echo htmlspecialchars($Product["CategoryID"])?>"><?php echo htmlspecialchars($res['CategoryName']);?></a></h2>
-            <h3 class="product_price">price &nbsp; <?php echo htmlspecialchars($Product['ProductPrice']);?></h3>
+            <h3 class="product_price">price &nbsp; $<?php echo htmlspecialchars($Product['ProductPrice']);?></h3>
             <h4 class="product_Desc"><?php echo htmlspecialchars($Product['ProductDesc']); ?></h4>
         <div class="qty_input">
                 <button class="qty_count_mins">-</button>

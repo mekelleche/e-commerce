@@ -30,7 +30,7 @@ session_start();
                 <a href="details.php?ProductID=<?php echo htmlspecialchars($row['ProductID']);?>"><?php echo htmlspecialchars($row['ProductName']); ?></a>
             </div>
             <div class="product_price">
-                <a href="details.php?ProductID=<?php echo htmlspecialchars($row['ProductID']);?>">price &nbsp; <?php echo htmlspecialchars($row['ProductPrice']);?></a>
+                <a href="details.php?ProductID=<?php echo htmlspecialchars($row['ProductID']);?>">price &nbsp; $<?php echo htmlspecialchars($row['ProductPrice']);?></a>
             </div>
             <div class="product_descrpition">
                 <a href="details.php?ProductID=<?php echo htmlspecialchars($row['ProductID']);?>"><i class="fa-solid fa-eye"></i> <?php echo htmlspecialchars($row['ProductDesc']); ?></a>
