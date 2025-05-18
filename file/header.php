@@ -28,7 +28,7 @@
         <ul>
             <li><a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://github.com/mekelleche/e-commerce" target="_blank"><i class="fa-brands fa-github"></i></a></li>
         </ul>
     </div>
     <div class="section">

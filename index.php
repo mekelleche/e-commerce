@@ -109,12 +109,51 @@
                 font-size: 24px;
             }
         }
+        .error-message {
+            color: #e74c3c;
+            background-color: #fdecea;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e74c3c;
+            display: none; /* Hidden by default */
+        }
     </style>
 </head>
 <body>
     <main>
         <div class="container">
             <h1>Login to Your Account</h1>
+            <?php if (isset($_GET['error'])): ?>
+                <div class="error-message" id="errorMessage">
+                    <?php
+                    switch($_GET['error']) {
+                        case 'emptyfields':
+                            echo 'Please fill in all fields';
+                            break;
+                        case 'wrongcredentials':
+                            echo 'Invalid email or password';
+                            break;
+                        case 'sqlerror':
+                            echo 'Database error occurred';
+                            break;
+                        default:
+                            echo 'Login error occurred';
+                    }
+                    ?>
+                </div>
+                
+                <script>
+                    // Show error message and fade out after 5 seconds
+                    document.getElementById('errorMessage').style.display = 'block';
+                    setTimeout(function() {
+                        document.getElementById('errorMessage').style.opacity = '0';
+                        setTimeout(function() {
+                            document.getElementById('errorMessage').style.display = 'none';
+                        }, 500);
+                    }, 5000);
+                </script>
+            <?php endif; ?>
             <form action="includes/login.inc.php" method="post">
                 <div>
                     <label for="em">Email Address</label>
@@ -130,7 +169,7 @@
                 <button type="submit" name="add">Login</button>
                 
                 <div style="margin-top: 20px; color: #666; font-size: 14px;">
-                    Don't have an account? <a href="#" style="color: #6A89A7; text-decoration: none;">Sign up</a>
+                    Don't have an account? <a href="signup.php" style="color: #6A89A7; text-decoration: none;">Sign up</a>
                 </div>
             </form>
         </div>
